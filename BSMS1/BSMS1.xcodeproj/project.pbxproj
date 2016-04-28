@@ -12,6 +12,7 @@
 		566EFE581CD255100060B8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566EFE571CD255100060B8C4 /* Assets.xcassets */; };
 		566EFE5B1CD255100060B8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566EFE591CD255100060B8C4 /* LaunchScreen.storyboard */; };
 		566EFE631CD255BC0060B8C4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EFE621CD255BC0060B8C4 /* TableViewController.swift */; };
+		566EFE651CD261880060B8C4 /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566EFE641CD261880060B8C4 /* BookInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		566EFE5A1CD255100060B8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		566EFE5C1CD255100060B8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		566EFE621CD255BC0060B8C4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		566EFE641CD261880060B8C4 /* BookInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				566EFE591CD255100060B8C4 /* LaunchScreen.storyboard */,
 				566EFE5C1CD255100060B8C4 /* Info.plist */,
 				566EFE621CD255BC0060B8C4 /* TableViewController.swift */,
+				566EFE641CD261880060B8C4 /* BookInfo.swift */,
 			);
 			path = BSMS1;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566EFE651CD261880060B8C4 /* BookInfo.swift in Sources */,
 				566EFE511CD255100060B8C4 /* AppDelegate.swift in Sources */,
 				566EFE631CD255BC0060B8C4 /* TableViewController.swift in Sources */,
 			);
