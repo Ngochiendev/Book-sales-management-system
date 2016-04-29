@@ -14,7 +14,6 @@ class myModel: NSObject {
     var title: String
     var intro: String
     
-    
     init (id: String, image: String, title: String, intro: String) {
         self.id = id
         self.image = image

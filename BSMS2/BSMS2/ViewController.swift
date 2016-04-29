@@ -8,6 +8,9 @@
 
 import UIKit
 
+var bookcells: [myModel] = []
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
