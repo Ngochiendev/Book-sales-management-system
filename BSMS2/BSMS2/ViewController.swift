@@ -45,7 +45,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     
     @available(iOS 2.0, *)
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("bookcells")! as UITableViewCell
+        return cell
+    }
 
 
 }
