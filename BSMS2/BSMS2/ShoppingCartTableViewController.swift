@@ -36,7 +36,7 @@ class ShoppingCartTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("bookcell", forIndexPath: indexPath)
         
-        let bookcell = bookcells[indexPath.row] as myModel
+        let bookcell = bookShoppingCart[indexPath.row] as myModel
 
         let image = cell.viewWithTag(101) as! UIImageView
         let title = cell.viewWithTag(103) as! UILabel

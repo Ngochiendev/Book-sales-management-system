@@ -32,9 +32,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             myModel(id: "5", image: "java", range: "Top5:", title: "《Java核心技术·卷1：基础知识》", intro: "机械工业出版社/88.00元",price: 88.00, descriptions: "----------内容简介：----------\n《Java核心技术·卷1：基础知识》共14章。第1章概述了Java语言与其他程序设计语言不同的性能；第2章讲解了如何下载和安装JDK及本书的程序示例；第3章介绍了变量、循环和简单的函数；第4章讲解了类和封装；第5章介绍了继承；第6章解释了接口和内部类；第7章概述了图形用户界面程序设计知识；第8章讨论AWT的事件模型；第9章探讨了SwingGUI工具箱；第10章讲解如何部署自己的应用程序或applet；第11章讨论异常处理；第12章概要介绍泛型程序设计；第13章讲解Java平台的集合框架；第14章介绍了多线程。本书最后还有一个附录，其中列出了Java语言的保留字。"),
             
-            myModel(id: "6", image: "ios", range: "Top6:", title: "《Hacking and Securing iOS Applications》", intro: "McGraw-Hill Osborne Media/98.00元",price:  98.0, descriptions: "----------内容简介：----------\nBased on unique and previously undocumented research, this book by noted iOS expert Jonathan Zdziarski shows the numerous weaknesses that exist in typical iPhone and iPad apps. Zdziarski shows finance companies, large institutions and others where the exploitable flaws lie in their code, and in this book he will show you as well, in a clear, direct, and immediately applicable style. More importantly, this book will teach the reader how to write more secure code to make breaching your applications more difficult. Topics cover manipulating the Objective-C runtime, debugger abuse, hijacking network traffic, implementing encryption, testing and class validation, jailbreak detection, and much more. "),
+            myModel(id: "6", image: "ios", range: "Top6:", title: "《Hacking and Securing iOS Applications》", intro: "McGraw-Hill Osborne Media/98.00元",price:  98.0, descriptions: "----------内容简介：----------\nBased on unique and previously undocumented research, this book by noted iOS expert Jonathan Zdziarski shows the numerous weaknesses that exist in typical iPhone and iPad apps. Zdziarski shows finance companies, large institutions and others where the exploitable flaws lie in their code, and in this book he will show you as well, in a clear, direct, and immediately applicable style. More importantly, this book will teach the reader how to write more secure code to make breaching your applications more difficult. Topics cover manipulating the Objective-C runtime, debugger abuse, hijacking network traffic, implementing encryption, testing and class validation, jailbreak detection, and much more."),
             
-            myModel(id: "7", image: "oc", range: "Top7:", title: "《Programming in Objective-C》", intro: "Addison-Wesley Professional/70.00元", price: 70.00, descriptions: "----------内容简介：----------\nUpdated for OS X 10.9 Mavericks, iOS 7, and Xcode 5 Programming in Objective-C is a concise, carefully written tutorial on the basics of Objective-C and object-oriented programming for Apple's iOS and OS X platforms. The book makes no assumptions about prior experience with object-oriented programming languages or with the C language (which Objective-C is based upon). Because of this, both beginners and experienced programmers alike can use this book to quickly and effectively learn the fundamentals of Objective-C. Readers can also learn the concepts of object-oriented programming without having to first learn all of the intricacies of the underlying C programming language. ")
+            myModel(id: "7", image: "oc", range: "Top7:", title: "《Programming in Objective-C》", intro: "Addison-Wesley Professional/70.00元", price: 70.00, descriptions: "----------内容简介：----------\nUpdated for OS X 10.9 Mavericks, iOS 7, and Xcode 5 Programming in Objective-C is a concise, carefully written tutorial on the basics of Objective-C and object-oriented programming for Apple's iOS and OS X platforms. The book makes no assumptions about prior experience with object-oriented programming languages or with the C language (which Objective-C is based upon). Because of this, both beginners and experienced programmers alike can use this book to quickly and effectively learn the fundamentals of Objective-C. Readers can also learn the concepts of object-oriented programming without having to first learn all of the intricacies of the underlying C programming language.")
             
         ]
         
@@ -44,7 +44,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc private func callMe() {
-        print("call me?")
         let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("shoppingCart")
         vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
         self.navigationController?.pushViewController(vc, animated: true)
@@ -65,16 +64,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         let book : myModel = bookcells[indexPath.row]
         bookShoppingCart.append(book)
-        let alertView : UIAlertController = UIAlertController(title: "您已成功加入购物车！", message: book.title, preferredStyle: .Alert)
+        let alertView : UIAlertController = UIAlertController(title: "~~您已成功加入购物车耶耶~~", message: book.title, preferredStyle: .Alert)
         let okaction : UIAlertAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            print("OK action")
+            print("OK action~~~~~")
         }
         alertView.addAction(okaction)
         self .presentViewController(alertView, animated: true) {
-            print("niclas in block")
+            print("niclas in block~~~~~~")
             
         }
-        print("add to book shopping cart")
+        print("add to book shopping cart~~~~")
     }
     
     
