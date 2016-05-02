@@ -23,9 +23,8 @@ class ShoppingCartTableViewController: UITableViewController {
     }
     
     @objc private func JumpToSubmitVC() {
-//        let vc =  UIStoryboard(name: "shoppingCart", bundle: nil).instantiateViewControllerWithIdentifier("SubmitPage")
-//        vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SubmitPage")
+        vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

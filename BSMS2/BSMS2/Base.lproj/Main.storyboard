@@ -169,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dQ-57-j8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="621"/>
+            <point key="canvasLocation" x="243" y="607"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="W92-cW-5Rf">
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPo-rX-19W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="-61"/>
+            <point key="canvasLocation" x="659" y="-61"/>
         </scene>
         <!--Submit View Controller-->
         <scene sceneID="NMd-BV-iL3">
@@ -220,13 +220,24 @@
                     <view key="view" contentMode="scaleToFill" id="ldF-Oi-E5t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-bi-Z1Y">
+                                <rect key="frame" x="84" y="136" width="152" height="132"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您的订单已成功提交~~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-rV-oHr">
+                                <rect key="frame" x="47" y="315" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeT-et-4d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="607"/>
+            <point key="canvasLocation" x="659" y="607"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hRK-rl-4Xk">
@@ -247,6 +258,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checked" width="152" height="132"/>
         <image name="se" width="302" height="427"/>
     </resources>
 </document>
