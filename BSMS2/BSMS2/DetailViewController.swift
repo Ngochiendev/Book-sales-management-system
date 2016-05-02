@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         print("book : \(book)")
         
-        self.bookName.text = book.title
+        self.bookName.text = book.descriptions
 
         // Do any additional setup after loading the view.
     }
