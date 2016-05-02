@@ -47,8 +47,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("shoppingCart")
         vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
         self.navigationController?.pushViewController(vc, animated: true)
-        
-
     }
 
 
@@ -65,15 +63,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let book : myModel = bookcells[indexPath.row]
         bookShoppingCart.append(book)
         let alertView : UIAlertController = UIAlertController(title: "~~您已成功加入购物车耶耶~~", message: book.title, preferredStyle: .Alert)
-        let okaction : UIAlertAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            print("OK action~~~~~")
-        }
+        let okaction : UIAlertAction = UIAlertAction(title: "OK", style: .Default) {(action) in}
         alertView.addAction(okaction)
         self .presentViewController(alertView, animated: true) {
-            print("niclas in block~~~~~~")
             
         }
-        print("add to book shopping cart~~~~")
     }
     
     

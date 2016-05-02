@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="733" y="-61"/>
         </scene>
-        <!--View Controller-->
+        <!--Submit View Controller-->
         <scene sceneID="NMd-BV-iL3">
             <objects>
-                <viewController id="SFl-OM-ZA9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubmitPage" id="SFl-OM-ZA9" customClass="SubmitViewController" customModule="BSMS2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HFS-0X-kQ7"/>
                         <viewControllerLayoutGuide type="bottom" id="3AE-B6-aoW"/>

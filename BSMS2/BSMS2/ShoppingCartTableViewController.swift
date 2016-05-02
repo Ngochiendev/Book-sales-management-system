@@ -18,6 +18,15 @@ class ShoppingCartTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "提交订单",style: .Plain ,target: self, action: #selector(JumpToSubmitVC))
+    }
+    
+    @objc private func JumpToSubmitVC() {
+//        let vc =  UIStoryboard(name: "shoppingCart", bundle: nil).instantiateViewControllerWithIdentifier("SubmitPage")
+//        vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SubmitPage")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 
