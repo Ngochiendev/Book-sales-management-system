@@ -11,7 +11,7 @@ import UIKit
 var bookcells: [myModel] = []
 
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
     
@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-
-
+    
+    
 }
 
