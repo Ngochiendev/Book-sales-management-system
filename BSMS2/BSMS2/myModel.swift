@@ -14,12 +14,16 @@ class myModel: NSObject {
     var range: String
     var title: String
     var intro: String
+    var price: Double
+    var descriptions: String
     
-    init (id: String, image: String, range: String, title: String, intro: String) {
+    init (id: String, image: String, range: String, title: String, intro: String, price: Double, descriptions: String) {
         self.id = id
         self.image = image
         self.range = range
         self.title = title
         self.intro = intro
+        self.price = price
+        self.descriptions = descriptions
     }
 }
