@@ -39,12 +39,10 @@ class ShoppingCartTableViewController: UITableViewController {
         let bookcell = bookcells[indexPath.row] as myModel
 
         let image = cell.viewWithTag(101) as! UIImageView
-        let range = cell.viewWithTag(102) as! UILabel
         let title = cell.viewWithTag(103) as! UILabel
         let intro = cell.viewWithTag(104) as! UILabel
         
         image.image = UIImage(named: bookcell.image)
-        range.text = bookcell.range
         title.text = bookcell.title
         intro.text = bookcell.intro
 

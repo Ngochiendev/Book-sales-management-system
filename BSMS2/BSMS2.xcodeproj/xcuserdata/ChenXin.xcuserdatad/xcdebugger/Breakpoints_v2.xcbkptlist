@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSMS2/ViewController.swift"
-            timestampString = "483885351.249419"
+            timestampString = "483892975.942503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "tableView(_:accessoryButtonTappedForRowWithIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
