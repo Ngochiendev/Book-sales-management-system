@@ -19,7 +19,7 @@ class ShoppingCartTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "提交订单",style: .Plain ,target: self, action: #selector(JumpToSubmitVC))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "提交订单(^-^) ",style: .Plain ,target: self, action: #selector(JumpToSubmitVC))
     }
     
     @objc private func JumpToSubmitVC() {
@@ -67,6 +67,7 @@ class ShoppingCartTableViewController: UITableViewController {
         if editingStyle == UITableViewCellEditingStyle.Delete {
             bookShoppingCart.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            self.tableView.reloadData()
         }
     }
 

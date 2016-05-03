@@ -11,16 +11,16 @@ import UIKit
 class myModel: NSObject {
     var id: String
     var image: String
-    var range: String
+    var rank: String
     var title: String
     var intro: String
-    var price: Double
+    var price: Int
     var descriptions: String
     
-    init (id: String, image: String, range: String, title: String, intro: String, price: Double, descriptions: String) {
+    init (id: String, image: String, rank: String, title: String, intro: String, price: Int, descriptions: String) {
         self.id = id
         self.image = image
-        self.range = range
+        self.rank = rank
         self.title = title
         self.intro = intro
         self.price = price
