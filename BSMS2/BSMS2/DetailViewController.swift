@@ -16,7 +16,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("book : \(book)")
         
         self.bookName.text = book.descriptions
 

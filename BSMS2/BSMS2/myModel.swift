@@ -17,6 +17,8 @@ class myModel: NSObject {
     var price: Int
     var descriptions: String
     
+    
+    
     init (id: String, image: String, rank: String, title: String, intro: String, price: Int, descriptions: String) {
         self.id = id
         self.image = image
