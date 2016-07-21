@@ -8,8 +8,9 @@
 
 import UIKit
 
-
+//bookcells means the information of books in top7 chart
 var bookcells: [myModel] = []
+//bookshoppingcart means the information of books in shopping cart
 var bookShoppingCart: [myModel] = []
 
 
@@ -38,11 +39,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         ]
         
+        //the left bar button item of navigation
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "本月图书销量排行榜：",style: .Plain ,target: self, action: nil)
         
+        //the right bar button item of navigation
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "查看购物车",style: .Plain ,target: self, action: #selector(callMe))
     }
     
+    //show in shopping cart - jump to the shoppingcartviewcontroller
     @objc private func callMe() {
         let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("shoppingCart")
         vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title

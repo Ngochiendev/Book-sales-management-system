@@ -22,6 +22,7 @@ class ShoppingCartTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "提交订单(^-^) ",style: .Plain ,target: self, action: #selector(JumpToSubmitVC))
     }
     
+    //jump to submitviewcontroller
     @objc private func JumpToSubmitVC() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SubmitPage")
         vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
@@ -30,18 +31,19 @@ class ShoppingCartTableViewController: UITableViewController {
 
 
     // MARK: - Table view data source
-
+    
+    //number of sections in tableview
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-
+    // number of rows in section
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return bookShoppingCart.count
     }
 
-    
+    //set uitableview information - top7
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("bookcell", forIndexPath: indexPath)
         
@@ -59,6 +61,7 @@ class ShoppingCartTableViewController: UITableViewController {
     }
     
     
+    // height for row at index path
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 156
     }
