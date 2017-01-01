@@ -40,43 +40,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         ]
         
         //the left bar button item of navigation
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "本月图书销量排行榜：",style: .Plain ,target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "本月图书销量排行榜：",style: .plain ,target: self, action: nil)
         
         //the right bar button item of navigation
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "查看购物车",style: .Plain ,target: self, action: #selector(callMe))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "查看购物车",style: .plain ,target: self, action: #selector(callMe))
     }
     
     //show in shopping cart - jump to the shoppingcartviewcontroller
-    @objc private func callMe() {
-        let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("shoppingCart")
+    @objc fileprivate func callMe() {
+        let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shoppingCart")
         vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
 
     // MARK: - table view data source
-    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookcells.count
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         let book : myModel = bookcells[indexPath.row]
         bookShoppingCart.append(book)
         let titleaddprice : String = book.title + " \(book.price).00元"
-        let alertView : UIAlertController = UIAlertController(title: "~~您已成功加入购物车耶耶~~", message: titleaddprice, preferredStyle: .Alert)
-        let okaction : UIAlertAction = UIAlertAction(title: "嗯，本宝宝知道了~", style: .Default, handler: nil)
+        let alertView : UIAlertController = UIAlertController(title: "~~您已成功加入购物车耶耶~~", message: titleaddprice, preferredStyle: .alert)
+        let okaction : UIAlertAction = UIAlertAction(title: "嗯，本宝宝知道了~", style: .default, handler: nil)
         alertView.addAction(okaction)
-        self .presentViewController(alertView, animated: true, completion: nil)
+        self .present(alertView, animated: true, completion: nil)
     }
     
     
     
-    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("bookcells")! as UITableViewCell
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "bookcells")! as UITableViewCell
         
         let bookcell = bookcells[indexPath.row] as myModel
         
@@ -94,11 +94,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
  
     //MARK: - tableView deleagte
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let book : myModel = bookcells[indexPath.row]
         
-        let detalVc : DetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        let detalVc : DetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detalVc.book = book
         self.navigationController?.pushViewController(detalVc, animated: true)
         

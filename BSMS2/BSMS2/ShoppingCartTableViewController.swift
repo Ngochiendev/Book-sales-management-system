@@ -19,12 +19,12 @@ class ShoppingCartTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "提交订单(^-^) ",style: .Plain ,target: self, action: #selector(JumpToSubmitVC))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "提交订单(^-^) ",style: .plain ,target: self, action: #selector(JumpToSubmitVC))
     }
     
     //jump to submitviewcontroller
-    @objc private func JumpToSubmitVC() {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SubmitPage")
+    @objc fileprivate func JumpToSubmitVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubmitPage")
         vc.navigationItem.title = self.navigationItem.rightBarButtonItem?.title
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -33,19 +33,19 @@ class ShoppingCartTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     //number of sections in tableview
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     // number of rows in section
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return bookShoppingCart.count
     }
 
     //set uitableview information - top7
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("bookcell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookcell", for: indexPath)
         
         let bookcell = bookShoppingCart[indexPath.row] as myModel
 
@@ -62,16 +62,16 @@ class ShoppingCartTableViewController: UITableViewController {
     
     
     // height for row at index path
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 156
     }
     
     
     // MARK - UITableViewDelegate
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            bookShoppingCart.removeAtIndex(indexPath.row)
-            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            bookShoppingCart.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             self.tableView.reloadData()
         }
     }
